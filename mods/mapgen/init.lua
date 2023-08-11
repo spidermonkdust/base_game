@@ -23,27 +23,10 @@ minetest.register_alias("mapgen_cobble", "basenodes:cobble")
 --
 -- Register biomes for biome API
 --
-
 minetest.clear_registered_biomes()
 minetest.clear_registered_decorations()
 
 if minetest.settings:get_bool("devtest_register_biomes", true) then
-	
-	minetest.register_biome({
-		name = "mapgen:sandland",
-		node_top = "basenodes:sand",
-		depth_top = 1,
-		node_filler = "basenodes:sand",
-		depth_filler = 1,
-		node_riverbed = "basenodes:leaves",
-		depth_riverbed = 2,
-		node_dungeon = "basenodes:sandstone",
-		y_max = 31000,
-		y_min = 4,
-		heat_point = 50,
-		humidity_point = 50,
-	})
-
 	minetest.register_biome({
 		name = "mapgen:grassland",
 		node_top = "basenodes:dirt_with_grass",
